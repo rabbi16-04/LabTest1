@@ -11,6 +11,8 @@ class CircuitTest {
 	@Test
 	void circuitTest() {
 		Circuit circuit = new Circuit();
+		
+		circuit.calculation();
 	}
 
 }
