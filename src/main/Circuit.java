@@ -14,7 +14,7 @@ public class Circuit {
 	public double T0;
 	public double Tn;
 	
-	void Circuit() {
+	public Circuit() {
 		
 		File name = new File("params.txt");
 				
