@@ -18,22 +18,22 @@ public class Circuit {
 		
 		File name = new File("params.txt");
 				
-				try {
+		try {
 					
-					Scanner sc = new Scanner(name);
+			Scanner sc = new Scanner(name);
+			
+			B = sc.nextDouble();
+			R = sc.nextDouble();
+			C = sc.nextDouble();
+			T0 = sc.nextDouble();
+			Tn = sc.nextDouble();	
+				
+			sc.close();
 					
-					B = sc.nextDouble();
-					R = sc.nextDouble();
-					C = sc.nextDouble();
-					T0 = sc.nextDouble();
-					Tn = sc.nextDouble();	
+		} catch (FileNotFoundException e) {
 					
-					sc.close();
-					
-				} catch (FileNotFoundException e) {
-					
-					System.out.println("File Not Found");
-				}
+			System.out.println("File Not Found");
+		}
 	}
 	
 	double equation(double t) {
@@ -54,8 +54,7 @@ public class Circuit {
 			for(i=T0;i<=Tn;i+=tmp) {
 				
 				ans = equation(i);
-				out.write(i + " " + ans + "\n\n");
-				
+				out.write(i + " " + ans + "\n\n");			
 			}
 			out.close();
 			
